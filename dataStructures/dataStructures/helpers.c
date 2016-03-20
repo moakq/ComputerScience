@@ -7,6 +7,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "helpers.h"
 
 // initializing a head pointer
@@ -62,7 +63,7 @@ void dequeue(void)
  *
  *
  *
- * different methods and operations on stacks
+ * different methods and operations on singly linked lists
  *
  */
 
@@ -156,3 +157,86 @@ void insertAtEnd(node* head, int n)
     // insert node at tail
     temp->next = new;
 }
+
+
+////////////////////////////////////////////////
+/**
+ *
+ *
+ *
+ *
+ * different methods and operations on doubly linked lists
+ *
+ */
+
+
+////////////////////////////////////////////////
+/**
+ *
+ *
+ *
+ *
+ * different methods and operations on stacks
+ *
+ */
+
+
+////////////////////////////////////////////////
+/**
+ *
+ *
+ *
+ *
+ * different methods and operations on queues
+ *
+ */
+
+
+////////////////////////////////////////////////
+/**
+ *
+ *
+ *
+ *
+ * different methods and operations on trees
+ *
+ */
+bool searchBST(TreeNode* root, int val)
+{
+    // if root is NULL
+    if (root == NULL)
+    {
+        return false;
+    }
+    
+    // if root->data is val
+    if (root->data == val)
+    {
+        return true;
+    }
+    
+    // if val is less than root->data
+    if (val < root->data)
+    {
+        searchBST(root->left, val);
+    }
+    
+    // if val is greater than root->data
+    if (val > root->data)
+    {
+        searchBST(root->right, val);
+    }
+    // didn't find val
+    return false;
+}
+
+
+////////////////////////////////////////////////
+/**
+ *
+ *
+ *
+ *
+ * different methods and operations on tries
+ *
+ */
