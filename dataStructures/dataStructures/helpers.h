@@ -10,13 +10,40 @@
 #define helpers_h
 #endif /* helpers_h */
 
+#include <stdio.h>
+#include <stdbool.h>
+
+/**
+ *
+ * defining a singly linked list node
+ *
+ */
+typedef struct node
+{
+    int data;
+    struct node* next;
+}node;
+
+
+/**
+ *
+ * defining a doubly linked list node
+ *
+ */
+typedef struct DLLnode
+{
+    int data;
+    struct DLLnode* next;
+    struct DLLnode* prev;
+}DLLnode;
+
 /**
  *
  * pushes n into a stack
  *
  */
-
 void push(int n);
+
 
 /**
  *
@@ -25,12 +52,14 @@ void push(int n);
  */
 void pop(void);
 
+
 /**
  *
  * enqueues n into a queue
  *
  */
 void enqueue(int n);
+
 
 /**
  *
@@ -39,16 +68,45 @@ void enqueue(int n);
  */
 void dequeue(void);
 
+
+////////////////////////////////////////////////
 /**
+ *
+ *
+ *
  *
  * different methods and operations on stacks
  *
  */
 
 
+/**
+ *
+ * searching a linked list
+ *
+ */
+bool searchLinkedList(node* list, int n);
+
 
 /**
  *
- * different methods and operations on queues
+ *  insertion at head in a linked list
  *
  */
+void insertAtHead(node* head, int n);
+
+
+/**
+ *
+ *  inserting at middle of a linked list
+ *
+ */
+void insertAtMiddle(node* head, int n);
+
+
+/**
+ *
+ *  inserting at end of a linked list
+ *
+ */
+void insertAtEnd(node* head, int n);
