@@ -11,6 +11,9 @@
 #include "helpers.h"
 
 int main(int argc, const char * argv[]) {
+    
+    // build an interface to interact with different data structures
+    // switch statments etc
     node* head = NULL;
     node* second = NULL;
     node* third = NULL;
@@ -27,6 +30,17 @@ int main(int argc, const char * argv[]) {
     
     third->data = 3;
     third->next = NULL;
-    bool check = searchLinkedList(head, 2);
+    
+    insertAtEndwithPush(&head, 4);
+    
+    iterateList(head);
+    
+    //insertAtHead(&head, 0);
+    // testing search
+    bool check = searchLinkedList(head, 4);
     printf(check ? "true\n": "false\n");
+    
+    
+    // testing lenght
+    printf("length: %d\n", lengthLL(head));
 }

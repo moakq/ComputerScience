@@ -115,20 +115,27 @@ void enqueue(int n);
 void dequeue(void);
 
 
-////////////////////////////////////////////////
+// -MARK: Singly linked list functions
+
+
 /**
  *
- *
- *
- *
- * different methods and operations on singly linked lists
+ *  iterate over a linked list
  *
  */
+void iterateList(node* head);
+
+/**
+ *
+ *  returns a length of a singly linked list
+ *
+ */
+int lengthLL(node* list);
 
 
 /**
  *
- * searching a linked list
+ * searching a singly linked list
  *
  */
 bool searchLinkedList(node* list, int n);
@@ -137,9 +144,10 @@ bool searchLinkedList(node* list, int n);
 /**
  *
  *  insertion at head in a linked list
+ *  passing a the head pointer by reference (pointer to pointer)
  *
  */
-void insertAtHead(node* head, int n);
+void insertAtHead(node** headRef, int n);
 
 
 /**
@@ -147,66 +155,47 @@ void insertAtHead(node* head, int n);
  *  inserting at middle of a linked list
  *
  */
-void insertAtMiddle(node* head, int n);
+void insertAtN(node* head, int n);
 
 
 /**
  *
- *  inserting at end of a linked list
+ *  inserts node at end of a singly linked list
  *
  */
-void insertAtEnd(node* head, int n);
+void insertAtEnd(node** headRef, int n);
 
 
-
-////////////////////////////////////////////////
 /**
  *
- *
- *
- *
- * different methods and operations on doubly linked lists
+ *  inserts node at end of a singly linked list using insertAtHead
  *
  */
+void insertAtEndwithPush(node** headRef, int n);
 
 
-
-
-
-////////////////////////////////////////////////
 /**
  *
- *
- *
- *
- * different methods and operations on stacks
+ *  copies a singly linked list
  *
  */
+node* copySLL(node* head);
 
-
-
-////////////////////////////////////////////////
 /**
  *
- *
- *
- *
- * different methods and operations on queues
+ *  copies a singly linked list recursively
+ *  clean, but uses stack space proportional to the length of list
  *
  */
+node* recurCopySSL(node* head);
 
+// -MARK: doubly linked list functions
 
+// -MARK: Stack functions
 
-////////////////////////////////////////////////
-/**
- *
- *
- *
- *
- * different methods and operations on trees
- *
- */
+// -MARK: Queue functions
 
+// -MARK: Tree functions
 
 /**
  *
@@ -214,3 +203,5 @@ void insertAtEnd(node* head, int n);
  *
  */
 bool searchBST(TreeNode* root, int val);
+
+// -MARK: Trie functions
